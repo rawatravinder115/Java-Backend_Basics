@@ -11,6 +11,8 @@ public class FooBarController {
         return "Hello Foo";
     }
 
+    my
+
     @GetMapping("/bar")
     public String getBar(){
         return "Hello Bar";
