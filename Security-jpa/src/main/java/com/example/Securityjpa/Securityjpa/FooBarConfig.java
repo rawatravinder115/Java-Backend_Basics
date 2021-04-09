@@ -10,7 +10,7 @@ public class FooBarConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
+        auth.userDetailsService(new MyUserDetailsService());
     }
 
     @Override
