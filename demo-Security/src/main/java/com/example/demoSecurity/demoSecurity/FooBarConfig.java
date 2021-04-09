@@ -34,7 +34,11 @@ public class FooBarConfig extends WebSecurityConfigurerAdapter {
     //    this is for authorization purpose
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http.
+                httpBasic()
+                // use this to convert html resopnse to json.(used for postman)
+                .and()
+            .authorizeRequests()
             .antMatchers("/admin/**").hasRole("admin_role") // this is used to match api // ** these star means after /admin
             .antMatchers("/student/**").hasAnyRole("admin_role","student_role")
             .antMatchers("/**").permitAll() // it will not asked anyone for  username and password.
