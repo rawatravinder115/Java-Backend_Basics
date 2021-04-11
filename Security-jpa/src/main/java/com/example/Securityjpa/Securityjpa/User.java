@@ -18,7 +18,7 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String username;
+    private String userName;
     private String password;
 
     boolean isActive;
@@ -36,6 +36,8 @@ public class User implements UserDetails {
 
         return authorities_list;
 
+        // admin : student
+
     }
 
     @Override
@@ -45,22 +47,22 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return this.username;
+        return this.userName;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
@@ -77,11 +79,20 @@ public class User implements UserDetails {
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.userName = username;
     }
 
     public void setPassword(String password) {
         this.password = password;
     }
 
+    public User( String userName, String password, boolean isActive, String authorities) {
+        this.userName = userName;
+        this.password = password;
+        this.isActive = isActive;
+        this.authorities = authorities;
+    }
+
+    public User() {
+    }
 }
