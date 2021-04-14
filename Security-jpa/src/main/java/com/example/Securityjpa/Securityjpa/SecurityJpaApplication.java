@@ -17,8 +17,8 @@ public class SecurityJpaApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		User user = new User("ravi","$2a$10$RZ1WuodG1zKHrKREKyNjIe.mzZeI86lVRmOozrccIjLL1YJ0HvIzu",true,"admin/student");
-		User user1 = new User("ankit","$2a$10$Iqfj1JlbdlwBlw.wRoU7vOr6YFDiqCr3X/oAGNekwCfoIwAIUoTiW",true,"student");
+		User user = new User("ravinder","$2a$10$Ift6z0o/8BB1p.ggECKnZObbtcZHj3USUSepU1PitHjqlHcfTOLlq",true,"admin/student");
+		User user1 = new User("ravin","$2a$10$ozWXWmlvyr4hKf0jN5VjbuXbltOKGuK3jk746fXYIC2mnxDgSE3i2",true,"student");
 
 //		ravi -> password [ravi]
 //		ankit -> password [ankit]

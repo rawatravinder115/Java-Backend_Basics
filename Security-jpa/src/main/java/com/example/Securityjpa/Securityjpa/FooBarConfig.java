@@ -29,7 +29,7 @@ public class FooBarConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/admin/**").hasAuthority("admin") // this is used to match api // ** these star means after /admin/**
-                .antMatchers("/student/**").hasAnyAuthority("admin","student")// checking as a Authorities.
+                .antMatchers("/student/**").hasAnyAuthority("student","admin")// checking as a Authorities.
                 .antMatchers("/**").permitAll() // it will not asked anyone for  username and password.
                 .and()
                 .formLogin(); // provide you a basic login page.

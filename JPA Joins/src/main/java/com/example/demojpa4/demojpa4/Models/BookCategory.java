@@ -14,7 +14,8 @@ public class BookCategory {
 
     private String name;
 
-    @OneToMany(mappedBy = "bookCategory", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "bookCategory", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    // use fetch type as a EAGER to fetch all the data bydefault its LAZY.
     private List<Book> books;
 
     public int getId() {
@@ -59,5 +60,14 @@ public class BookCategory {
     }
 
     public BookCategory() {
+    }
+
+    @Override
+    public String toString() {
+        return "BookCategory{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", books=" + books +
+                '}';
     }
 }

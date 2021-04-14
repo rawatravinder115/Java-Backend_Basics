@@ -1,6 +1,7 @@
 package com.example.demojpa4.demojpa4.Repository;
 
 import com.example.demojpa4.demojpa4.Models.Book;
+import com.example.demojpa4.demojpa4.Models.BookCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -21,6 +22,8 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
 //    List<Book> findByCost(int cost);
 //
 //    Book findById(int id);
+
+    public List<Book> findByBookCategory(BookCategory category);
 
     @Query(value = "select * from Book b where b.author_name = ?1 and b.name = ?2", nativeQuery = true)
     public List<Book> getBooksByAuthorAndBookName(String authorName, String bookName);
