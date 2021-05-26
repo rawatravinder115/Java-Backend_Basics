@@ -17,7 +17,7 @@ public class DBOperations {
 
     public static Connection getConnection() throws SQLException {
     if (connection == null){
-        synchronized (DBOperations.class){
+        synchronized (DBOperations.class){ // class level lock.
             if (connection == null){
                 connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/person_4","root","rawatravi");
                 //jdbc = java database connectivity using mysql.
@@ -43,6 +43,7 @@ public class DBOperations {
     public static void createTable(String name) throws SQLException {
 
         getConnection();
+//      statement --> The object used for executing a static SQL statement and returning the results it produces.
         Statement statement = connection.createStatement();
         boolean isCreated =statement.execute("CREATE TABLE " + name + " ( id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), age INT, " +
                 "address VARCHAR(50))");
@@ -61,6 +62,8 @@ public class DBOperations {
     public static void insertPerson(CreateRequest request ) throws SQLException {
 
         getConnection();
+//      preparedStatement -> An object that represents a precompiled SQL statement <P>A SQL statement is precompiled and stored in a <code>PreparedStatement</code> object.
+//      This object can then be used to efficiently execute this statement multiple times.
         PreparedStatement preparedStatement=connection.prepareStatement("INSERT INTO person(id,name,age,address) VALUES (null,?,?,?)");
         preparedStatement.setString(1,request.getName());
         preparedStatement.setInt(2,request.getAge());
@@ -88,6 +91,7 @@ public class DBOperations {
 
         // getting persons from the DB.
         getConnection();
+//        Statement --> The object used for executing a static SQL statement and returning the results it produces.
         Statement statement= connection.createStatement();
         ResultSet resultSet=statement.executeQuery("SELECT * FROM person");
         List<Person> persons= new ArrayList<>();

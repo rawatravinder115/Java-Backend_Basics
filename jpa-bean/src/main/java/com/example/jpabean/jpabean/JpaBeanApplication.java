@@ -11,7 +11,7 @@ public class JpaBeanApplication {
 		SpringApplication.run(JpaBeanApplication.class, args);
 
 		// this is way of creating our own bean
-//		// please comment out the jpa dependency in pom.xml because don't define the database here and this will give us the
+//		// please comment out the jpa dependency in pom.xml because if we don't define the database here , this will give us the
 //        // error  --> Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
 //		//
 //		//Reason: Failed to determine a suitable driver class

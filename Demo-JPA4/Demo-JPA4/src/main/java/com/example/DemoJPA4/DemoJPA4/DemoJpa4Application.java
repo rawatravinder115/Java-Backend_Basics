@@ -78,7 +78,7 @@ public class DemoJpa4Application implements CommandLineRunner {
 
 //        Book b1 = new Book("HTML","BOB",200);
 //        Book b2 = new Book("CSS","Louis",240,2);
-        Book b2 = new Book("Jquery","Louis",240,5); // giving you a foreign key constraint fails because 5 (bookcategory) is not present in the main table.
+        Book b2 = new Book("Jquery","Louis",240,5); // giving you a foreign key constraint fails because 5 (bookcategory) is not present in the main table. 
 //		books.add(b1);
 		books.add(b2);
 //

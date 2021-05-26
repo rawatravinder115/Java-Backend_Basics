@@ -27,7 +27,7 @@ public interface BookRepository extends JpaRepository<Book,Integer> { // jpa onl
 
     // native sql language -> always consider column name
     @Query(value="select * from Book b where b.Author_name=:name",nativeQuery = true) // here we take AuthorName as a Author_name because hibernate convert// camel case into the (underscore + gap) that's we write it like that.
-    public List<Book> findByAuthor(String name);
+    public List<Book> findByAuthor(String name); // here {:} this means we are referring it with parameter below him.
 
     // jpql -> java persistence query language because it do mapping from the java object it doesn't consider the column name.
     // name should same as the java object(property name).
