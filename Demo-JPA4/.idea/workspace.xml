@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55617a4a-8886-4b2e-8839-79c44cbfbcac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../MultiThread-Maven/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo.JDBC-4/src/main/java/com/example/JDBC4/demo/JDBC4/DBManager/DBOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo.JDBC-4/src/main/java/com/example/JDBC4/demo/JDBC4/DBManager/DBOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-Security/src/main/java/com/example/demoSecurity/demoSecurity/FooBarConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-Security/src/main/java/com/example/demoSecurity/demoSecurity/FooBarConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-mongo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-mongo/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +62,7 @@
       <workItem from="1617172266462" duration="7554000" />
       <workItem from="1617187830992" duration="5799000" />
       <workItem from="1620831159228" duration="241000" />
+      <workItem from="1622299617890" duration="19000" />
     </task>
     <servers />
   </component>

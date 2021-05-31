@@ -53,5 +53,7 @@ public class FooBarConfig extends WebSecurityConfigurerAdapter {
     }
 
 //     whenever you are defining a authentication and Authirization function you also need to
-//    define PasswordEncoder Bean because app dont store the password in the simplw form so it decode it.
+//    define PasswordEncoder Bean because app dont store the password in the simple text form so this encoder  decode it for you .
 }
+
+
